@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Newsletter Guide for Construction & Home Building Business Coaches</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .form-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .form-header h1 {
+            margin: 0 0 15px 0;
+            font-size: 2.2em;
+            font-weight: 300;
+        }
+        .form-header p {
+            margin: 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .form-content {
+            padding: 40px 30px;
+        }
+        .guide-description {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #ffc107;
+        }
+        .guide-description h3 {
+            margin: 0 0 15px 0;
+            color: #856404;
+            font-size: 1.3em;
+        }
+        .guide-description ul {
+            margin: 15px 0 0 0;
+            color: #856404;
+        }
+        .guide-description li {
+            margin-bottom: 8px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 0.95em;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        .success-message {
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+        .required {
+            color: #e74c3c;
+        }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .form-content { padding: 30px 20px; }
+            .form-row { grid-template-columns: 1fr; }
+            .form-header h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h1>Get Your Free Newsletter Guide for Coaches</h1>
+            <p>"Complete Newsletter Success Guide for Construction, Renovation, Restoration & Home Building Business Coaches"</p>
+        </div>
+        
+        <div class="form-content">
+            <div class="guide-description">
+                <h3>What's Inside Your Free Guide:</h3>
+                <ul>
+                    <li><strong>50 proven newsletter topics</strong> specifically for building industry coaches</li>
+                    <li><strong>Seasonal content calendars</strong> to keep you consistent year-round</li>
+                    <li><strong>Engagement strategies</strong> that turn readers into paying clients</li>
+                    <li><strong>Conversion templates</strong> for different coaching services</li>
+                    <li><strong>Email templates</strong> for contractor selection and project management</li>
+                    <li><strong>Budget planning worksheets</strong> and project timeline tools</li>
+                    <li><strong>Emergency protocols</strong> and business systems templates</li>
+                </ul>
+            </div>
+            
+            <form id="guideForm" action="https://formspree.io/f/movloder" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guideName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="guideName" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="guideEmail">Email Address <span class="required">*</span></label>
+                        <input type="email" id="guideEmail" name="email" required placeholder="Enter your email">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guideCompany">Company Name</label>
+                        <input type="text" id="guideCompany" name="company" placeholder="Your coaching business name">
+                    </div>
+                    <div class="form-group">
+                        <label for="guideSpecialty">Coaching Specialty</label>
+                        <select id="guideSpecialty" name="specialty">
+                            <option value="general">General Construction Coaching</option>
+                            <option value="home-building">Home Building Coach</option>
+                            <option value="renovation">Renovation Business Coach</option>
+                            <option value="restoration">Restoration Business Coach</option>
+                            <option value="contractor">Contractor Coaching</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guideChallenges">What's Your Biggest Coaching Business Challenge? (Optional)</label>
+                    <textarea id="guideChallenges" name="challenges" rows="3" placeholder="What's your biggest challenge in growing your coaching business or creating consistent content?"></textarea>
+                </div>
+                
+                <!-- Hidden fields for identification -->
+                <input type="hidden" name="request_type" value="Free Guide Download">
+                <input type="hidden" name="guide_title" value="Complete Newsletter Success Guide for Construction, Renovation, Restoration & Home Building Business Coaches">
+                
+                <button type="submit" class="btn">Download Your Free Newsletter Guide for Coaches</button>
+            </form>
+            
+            <div id="guideSuccess" class="success-message">
+                <strong>Success!</strong> Your free guide request has been submitted. Check your email for download instructions within the next few minutes.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('guideForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch('https://formspree.io/f/movloder', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('guideForm').style.display = 'none';
+                    document.getElementById('guideSuccess').style.display = 'block';
+                } else {
+                    alert('There was an error submitting your request. Please try again.');
+                }
+            })
+            .catch(error => {
+                alert('There was an error submitting your request. Please try again.');
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
