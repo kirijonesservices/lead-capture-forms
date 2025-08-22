@@ -3,225 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Strategy Call for Construction & Home Building Business Coaches</title>
+    <title>Book Your Strategy Call</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
+
         .container {
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .booking-card {
             background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
-        .form-header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-            padding: 40px 30px;
+
+        .header {
             text-align: center;
-        }
-        .form-header h1 {
-            margin: 0 0 15px 0;
-            font-size: 2.2em;
-            font-weight: 300;
-        }
-        .form-header p {
-            margin: 0;
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-        .form-content {
-            padding: 40px 30px;
-        }
-        .call-description {
-            background: linear-gradient(135deg, #e8f5e8 0%, #a8e6cf 100%);
-            padding: 25px;
-            border-radius: 10px;
             margin-bottom: 30px;
-            border-left: 5px solid #28a745;
         }
-        .call-description h3 {
-            margin: 0 0 15px 0;
-            color: #155724;
-            font-size: 1.3em;
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
-        .call-description p {
-            margin: 10px 0;
-            color: #155724;
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 16px;
+            line-height: 1.5;
         }
+
         .form-group {
             margin-bottom: 25px;
         }
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+
         label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
             color: #2c3e50;
-            font-size: 0.95em;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 14px;
         }
+
         input, select, textarea {
             width: 100%;
             padding: 15px;
             border: 2px solid #e1e8ed;
             border-radius: 10px;
             font-size: 16px;
-            transition: all 0.3s ease;
-            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
         }
+
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: #2c3e50;
-            box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+            border-color: #667eea;
         }
-        .btn {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 18px 40px;
             border: none;
-            border-radius: 50px;
-            font-size: 1.2em;
+            padding: 18px;
+            border-radius: 10px;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            margin-top: 20px;
-            box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .btn:hover {
+
+        .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
         }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
         .success-message {
-            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
-            color: white;
-            padding: 20px;
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
             border-radius: 10px;
             margin-top: 20px;
             text-align: center;
-            display: none;
         }
-        .required {
-            color: #e74c3c;
-        }
-        @media (max-width: 768px) {
-            body { padding: 10px; }
-            .form-content { padding: 30px 20px; }
-            .form-row { grid-template-columns: 1fr; }
-            .form-header h1 { font-size: 1.8em; }
+
+        @media (max-width: 600px) {
+            .booking-card {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="form-header">
-            <h1>Let's Talk About Your Coaching Business</h1>
-            <p>Schedule Your Free Strategy Call</p>
-        </div>
-        
-        <div class="form-content">
-            <div class="call-description">
-                <h3>What We'll Discuss in Your Strategy Call:</h3>
-                <p><strong>Your Current Business:</strong> Where you are now and where you want to go with your coaching practice.</p>
-                <p><strong>Content Challenges:</strong> What's holding you back from consistent, effective marketing content.</p>
-                <p><strong>Newsletter Strategy:</strong> How newsletters can fit into your business growth plan and attract ideal clients.</p>
-                <p><strong>Next Steps:</strong> Whether we're a good fit to work together and what your options are moving forward.</p>
+        <div class="booking-card">
+            <div class="header">
+                <h1>Book Your Strategy Call</h1>
+                <p>Let's discuss how newsletter marketing can help grow your coaching business</p>
             </div>
-            
-            <p style="text-align: center; margin-bottom: 30px; color: #7f8c8d; font-style: italic;">
-                Whether you're just getting started as a business coach in construction, renovation, restoration, or home building, or you're an established industry leader, I'd love to learn about your specific challenges and see how newsletters might fit into your growth strategy.
-            </p>
-            
-            <form id="strategyForm" action="https://formspree.io/f/movloder" method="POST">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="strategyName">Full Name <span class="required">*</span></label>
-                        <input type="text" id="strategyName" name="name" required placeholder="Enter your full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="strategyEmail">Email Address <span class="required">*</span></label>
-                        <input type="email" id="strategyEmail" name="email" required placeholder="Enter your email">
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="strategyPhone">Phone Number</label>
-                        <input type="tel" id="strategyPhone" name="phone" placeholder="Your phone number">
-                    </div>
-                    <div class="form-group">
-                        <label for="strategyCompany">Company Name</label>
-                        <input type="text" id="strategyCompany" name="company" placeholder="Your coaching business name">
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="strategyExperience">Coaching Experience</label>
-                        <select id="strategyExperience" name="experience">
-                            <option value="new">Just starting out</option>
-                            <option value="1-2-years">1-2 years</option>
-                            <option value="3-5-years">3-5 years</option>
-                            <option value="5-plus">5+ years established</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="strategyRevenue">Current Monthly Revenue</label>
-                        <select id="strategyRevenue" name="revenue">
-                            <option value="startup">Pre-revenue/Startup</option>
-                            <option value="under-5k">Under $5,000</option>
-                            <option value="5k-15k">$5,000 - $15,000</option>
-                            <option value="15k-30k">$15,000 - $30,000</option>
-                            <option value="30k-plus">$30,000+</option>
-                        </select>
-                    </div>
-                </div>
-                
+
+            <form id="strategyCallForm" action="https://formspree.io/f/movloder" method="POST">
                 <div class="form-group">
-                    <label for="strategyGoals">Primary Goals & Challenges <span class="required">*</span></label>
-                    <textarea id="strategyGoals" name="goals" rows="4" placeholder="What are your main goals for growing your coaching business? What challenges are you facing with content creation or client acquisition?" required></textarea>
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="strategyTimezone">Preferred Call Time</label>
-                    <select id="strategyTimezone" name="preferred_time">
-                        <option value="morning-mst">Morning (9-11 AM MST)</option>
-                        <option value="midday-mst">Midday (11 AM-2 PM MST)</option>
-                        <option value="afternoon-mst">Afternoon (2-5 PM MST)</option>
-                        <option value="evening-mst">Evening (5-7 PM MST)</option>
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="business">Business/Company Name</label>
+                    <input type="text" id="business" name="business">
+                </div>
+
+                <div class="form-group">
+                    <label for="industry">Your Primary Industry *</label>
+                    <select id="industry" name="industry" required>
+                        <option value="">Select your focus area</option>
+                        <option value="home-building">Home Building</option>
+                        <option value="renovation">Renovation</option>
+                        <option value="construction">Construction</option>
+                        <option value="restoration">Restoration</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
-                
-                <!-- Hidden fields for identification -->
-                <input type="hidden" name="request_type" value="Free Strategy Call">
-                
-                <button type="submit" class="btn">Schedule Your Free Strategy Call</button>
+
+                <div class="form-group">
+                    <label for="challenges">What's your biggest challenge with newsletter marketing?</label>
+                    <textarea id="challenges" name="challenges" placeholder="Tell me about your current situation and what you'd like to achieve..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferred_time">Preferred Call Time (MST)</label>
+                    <input type="text" id="preferred_time" name="preferred_time" placeholder="e.g., Weekday mornings, Tuesday afternoons, etc.">
+                </div>
+
+                <button type="submit" class="submit-btn">Book My Strategy Call</button>
             </form>
-            
-            <div id="strategySuccess" class="success-message">
-                <strong>Success!</strong> Your strategy call request has been submitted. I'll personally review your information and contact you within 24 hours (Monday-Friday, 9am-5pm MST) to schedule our conversation.
+
+            <div id="successMessage" class="success-message">
+                Thank you! I'll be in touch within 24 hours to schedule your strategy call.
             </div>
         </div>
     </div>
 
     <script>
-        document.getElementById('strategyForm').addEventListener('submit', function(e) {
+        document.getElementById('strategyCallForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const formData = new FormData(this);
             
-            fetch('https://formspree.io/f/movloder', {
+            fetch(this.action, {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -230,15 +201,14 @@
             })
             .then(response => {
                 if (response.ok) {
-                    document.getElementById('strategyForm').style.display = 'none';
-                    document.getElementById('strategySuccess').style.display = 'block';
+                    this.style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'block';
                 } else {
-                    alert('There was an error submitting your request. Please try again.');
+                    throw new Error('Network response was not ok');
                 }
             })
             .catch(error => {
-                alert('There was an error submitting your request. Please try again.');
-                console.error('Error:', error);
+                alert('There was a problem submitting your form. Please try again or email me directly.');
             });
         });
     </script>
